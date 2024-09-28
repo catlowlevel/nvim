@@ -17,4 +17,22 @@ return {
     priority = 1000,
     opts = {},
   },
+  -- {
+  --   "bluz71/vim-moonfly-colors",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  -- },
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  -- {
+  --   "sainnhe/gruvbox-material",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  -- },
 }
