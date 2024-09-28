@@ -44,6 +44,8 @@ return {
     mappings = {
       -- first key is the mode
       i = {
+        ["jk"] = { "<Esc>", desc = "Escape" },
+        ["kj"] = { "<Esc>", desc = "Escape" },
         ["<M-3>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Terminal" },
         ["<M-o>"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Source Header" },
         ["<C-h>"] = {
