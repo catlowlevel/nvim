@@ -11,5 +11,7 @@ return {
   { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.vim-move" },
+  { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
+  { import = "astrocommunity.motion.mini-surround" },
   -- import/override with your plugins folder
 }
