@@ -18,6 +18,8 @@ local function reset_scale_factor() vim.g.neovide_scale_factor = vim.g.neovide_i
 ---@param clamp? boolean
 local function change_scale_factor(increment, clamp) set_scale_factor(vim.g.neovide_scale_factor + increment, clamp) end
 
+vim.o.guifont = "JetBrainsMono Nerd Font Mono:h20"
+
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
