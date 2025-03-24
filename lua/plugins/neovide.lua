@@ -75,6 +75,28 @@ return {
         },
         ["<C-0>"] = { reset_scale_factor, desc = "Reset Neovide scale factor" },
       },
+      v = {
+        ["<D-c>"] = {
+          function() vim.cmd '"+y' end,
+          desc = "Copy",
+        },
+        ["<D-v>"] = {
+          function() vim.cmd '"+P' end,
+          desc = "Paste in Visual Mode",
+        },
+      },
+      c = {
+        ["<D-v>"] = {
+          function() vim.cmd "<C-R>+" end,
+          desc = "Paste in Command Mode",
+        },
+      },
+      i = {
+        ["<D-v>"] = {
+          function() vim.cmd '<ESC>l"+Pli' end,
+          desc = "Paste in Insert Mode",
+        },
+      },
     },
   },
 }

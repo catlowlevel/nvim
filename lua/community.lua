@@ -8,7 +8,8 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.completion.codeium-vim" },
+  { import = "astrocommunity.pack.cpp" },
+  -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.vim-move" },
   { import = "astrocommunity.colorscheme.fluoromachine-nvim" },
