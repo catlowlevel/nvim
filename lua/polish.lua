@@ -10,6 +10,8 @@ if starts_with(os.getenv "OS" or "", "Windows") then
   vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
   vim.opt.shellquote = ""
   vim.opt.shellxquote = ""
+else
+  vim.opt.shell = "fish"
 end
 
 if true then return end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
