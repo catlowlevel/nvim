@@ -9,6 +9,8 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.cs" },
+  { import = "astrocommunity.pack.go" },
   -- { import = "astrocommunity.completion.codeium-vim" },
   { import = "astrocommunity.editing-support.vim-visual-multi" },
   { import = "astrocommunity.editing-support.vim-move" },
@@ -16,5 +18,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.media.vim-wakatime" },
+  -- { import = "astrocommunity.bars-and-lines.wakastat" },
   -- import/override with your plugins folder
 }
