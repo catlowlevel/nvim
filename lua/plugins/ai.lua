@@ -16,10 +16,10 @@ return {
         agents = {
           {
             provider = "anthropic",
-            name = "ChatClaude-Haiku",
+            name = "Claude-Haiku",
             chat = true,
-            command = false,
-            model = { model = "claude-3-haiku-20240307", temperature = 0.8, top_p = 1 },
+            command = true,
+            model = { model = "claude-haiku-4-5-20251001", temperature = 0.8 },
             system_prompt = require("gp.defaults").chat_system_prompt,
           },
         },
