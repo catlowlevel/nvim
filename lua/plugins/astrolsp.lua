@@ -11,7 +11,7 @@ return {
     -- Configuration table of features provided by AstroLSP
     features = {
       codelens = false, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
+      inlay_hints = true, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
     -- customize lsp formatting options
@@ -43,6 +43,22 @@ return {
     -- client specific configuration can also go in `lsp/` in your configuration root (see `:h lsp-config`)
     config = {
       -- ["*"] = { capabilities = {} }, -- modify default LSP client settings such as capabilities
+      rust_analyzer = {
+        settings = {
+          ["rust-analyzer"] = {
+            inlayHints = {
+              chainingHints = { enable = true },
+              typeHints = { enable = false },
+              parameterHints = { enable = false },
+              closingBraceHints = { enable = true },
+              bindingModeHints = { enable = false },
+              closureReturnTypeHints = { enable = "never" },
+              lifetimeElisionHints = { enable = "never" },
+              reborrowHints = { enable = "never" },
+            },
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
