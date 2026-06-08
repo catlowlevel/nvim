@@ -16,6 +16,7 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.colorscheme.tokyodark-nvim" },
   { import = "astrocommunity.motion.mini-surround" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   -- { import = "astrocommunity.media.vim-wakatime" },
   -- { import = "astrocommunity.bars-and-lines.wakastat" },
   -- import/override with your plugins folder
