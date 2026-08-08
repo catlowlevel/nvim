@@ -63,7 +63,22 @@ return {
     -- customize how language servers are attached
     handlers = {
       -- a function with the key `*` modifies the default handler, functions takes the server name as the parameter
-      -- ["*"] = function(server) vim.lsp.enable(server) end
+      ["*"] = function(server)
+        local existing_config = vim.lsp.config[server]
+        local existing_before_init = existing_config.before_init
+
+        vim.lsp.config(server, {
+          before_init = function(init_params, config)
+            if existing_before_init then existing_before_init(init_params, config) end
+
+            local schema_name = config.name == "rust_analyzer" and "rust-analyzer" or config.name
+            local loader = require("codesettings").loader()
+            if type(config.root_dir) == "string" then loader:root_dir(config.root_dir) end
+            loader:with_local_settings(schema_name, config)
+          end,
+        })
+        vim.lsp.enable(server)
+      end,
 
       -- the key is the server that is being setup with `vim.lsp.config`
       -- rust_analyzer = false, -- setting a handler to false will disable the set up of that language server
@@ -113,6 +128,10 @@ return {
     on_attach = function(client, bufnr)
       -- this would disable semanticTokensProvider for all clients
       -- client.server_capabilities.semanticTokensProvider = nil
+      if client.name == "clangd" then
+        client.server_capabilities.inlayHintProvider = nil
+        vim.lsp.inlay_hint.enable(false, { bufnr = bufnr })
+      end
     end,
   },
 }

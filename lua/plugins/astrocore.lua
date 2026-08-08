@@ -58,14 +58,14 @@ return {
         ["jk"] = { "<Esc>", desc = "Escape" },
         ["kj"] = { "<Esc>", desc = "Escape" },
         ["<M-3>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Terminal" },
-        ["<M-o>"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Source Header" },
+        ["<M-o>"] = { "<Cmd>LspClangdSwitchSourceHeader<CR>", desc = "Switch Source Header" },
         ["<C-h>"] = {
           function() vim.lsp.buf.signature_help() end,
         },
       },
       n = {
         ["U"] = { "<C-r>", desc = "Redo" },
-        ["<M-o>"] = { "<Cmd>ClangdSwitchSourceHeader<CR>", desc = "Switch Source Header" },
+        ["<M-o>"] = { "<Cmd>LspClangdSwitchSourceHeader<CR>", desc = "Switch Source Header" },
         -- second key is the lefthand side of the map
         ["<M-3>"] = { "<Cmd>ToggleTerm direction=float<CR>", desc = "Terminal" },
 
